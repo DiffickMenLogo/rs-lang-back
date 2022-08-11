@@ -4,7 +4,7 @@ const WordsShema = new Schema(
     {
         page: {type: Number, required: true},
         word: {type: String, required: true},
-        group: {type: String, required: true},
+        group: {type: Number, required: true},
         transcription: {type: String, required: true},
         translateWord: {type: String, required: true},
         imageExample: {type: String, required: true},
@@ -21,4 +21,4 @@ const WordsShema = new Schema(
     }
 );
 
-module.exports = model("Words", WordsShema);
+module.exports = model("allWords", WordsShema);
