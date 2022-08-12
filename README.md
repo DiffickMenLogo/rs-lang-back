@@ -7,7 +7,7 @@ api documentation for rs-lang-back
 - Go to downloaded folder: `$ cd async-race-api`.
 - Install dependencies: `$ npm install`.
 - Start server: `$ npm start`.
-- Now you can send requests to the address: `http://127.0.0.1:5000`.
+- Now you can send requests to the address: `https://rs-lang-api-diffick.herokuapp.com`.
 
 ## Usage
 
