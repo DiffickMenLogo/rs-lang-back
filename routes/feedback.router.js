@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const mailer = require('../utils/nodemailer');
-const { getFeedbackMessage } = require('../utils/getMassages');
+const mailer = require('./nodemailer');
+const { getFeedbackMessage } = require('../utils/getMessage');
 const cloudinary = require('cloudinary').v2;
 const { CLOUDINARY_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET } = require('../config');
 

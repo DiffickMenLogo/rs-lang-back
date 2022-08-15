@@ -16,7 +16,7 @@ router.post('/upload', auth, async function(req, res) {
 		const result = await cloudinary.uploader.upload(req.files.avatar.tempFilePath, { upload_preset: 'avatarPreset' });
 		const user = await User.findByIdAndUpdate(ID, { avatarURL: result.url, new: true });
 		const avatarURL = result.url || user.avatarURL;
-		res.status(200).json({ avatarURL, message: 'Photo changed.' });
+		res.status(200).json({ avatarURL, message: 'Загрузили новое фото. Вы тут просто красавчик :)' });
 	} catch (e) {
 		console.log(e);
 		res.send(e);

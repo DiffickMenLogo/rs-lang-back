@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const authMiddleware = require('../auth.middleware');
 const User = require('../models/user.model');
-const { transformStats, getUserStats } = require('../utils/getStats');
-const { getStatisticsMessage } = require('../utils/getMassages');
+const { transformStats, getUserStats } = require('../utils/statsFunctions');
+const { getStatisticsMessage } = require('../utils/getMessage');
 
 router.post('/statistics', authMiddleware, async (req, res) => {
 	try {

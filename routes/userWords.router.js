@@ -1,13 +1,13 @@
 const router = require('express').Router({ mergeParams: true });
 const User = require('../models/user.model');
 const authMiddleware = require('../auth.middleware');
-const { getUserWordsMessage } = require('../utils/getMassages');
+const { getUserWordsMessage } = require('../utils/getMessage');
 
 router.get('/userWords', authMiddleware, async (req, res) => {
 	try {
 		const userId = req.user.userId;
 		const user = await User.find({ userId });
-		res.status(200).json({ userWords: user.words, message: 'Your words' });
+		res.status(200).json({ userWords: user.words, message: 'Ваши слова доставлены' });
 	} catch (e) {
 		console.log('get user words', e);
 		res.status(400).send(e);
@@ -27,6 +27,7 @@ router.post('/updateWord', authMiddleware, async (req, res) => {
 		console.log('wordEntity', wordEntity);
 		if (wordEntity) {
 			if (name === 'deleted' && newValue === false) {
+				console.log('popal v if');
 				const newUserWords = await userWords.filter((item) => `${item._id}` != `${wordId}`);
 				const newUser = await User.findByIdAndUpdate(
 					req.user.userId,

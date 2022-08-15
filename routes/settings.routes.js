@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const authMiddleware = require('../auth.middleware');
 const User = require('../models/user.model');
-const { getSettingsMessage } = require('../utils/getMassages');
+const { getSettingsMessage } = require('../utils/getMessage');
 
 router.post('/settings', authMiddleware, async (req, res) => {
 	try {
