@@ -16,7 +16,7 @@ const AllWordsSchema = new Schema(
 		textExample: { type: String },
 		textExampleTranslate: { type: String },
 	},
-	{ collection: 'all-words' }
+	{ collection: 'AllWords' }
 );
 
 module.exports = model('AllWords', AllWordsSchema);

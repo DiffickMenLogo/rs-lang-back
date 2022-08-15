@@ -57,7 +57,7 @@ const User = new Schema(
 			}
 		]
 	},
-	{ collection: 'users' }
+	{ collection: 'Users' }
 );
 
 module.exports = model('Users', User);
