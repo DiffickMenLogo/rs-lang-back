@@ -7,7 +7,7 @@ api documentation for rs-lang-back
 - Go to downloaded folder: `$ cd async-race-api`.
 - Install dependencies: `$ npm install`.
 - Start server: `$ npm start`.
-- Now you can send requests to the address: `https://rs-lang-api-diffick.herokuapp.com`.
+- Now you can send requests to the address: `https://rs-lang-back-diffickmenlogo.herokuapp.com/`.
 
 ## Usage
 
@@ -200,32 +200,12 @@ Delete specified car from a garage
 * **Method:**
 
     `Get`
+    
+* **NEED TOKEN**
 
 * **Success Response:**
 
   * **Code:** 200 OK <br />
-    **Content:** 
-    ```json
-      	{
-		group: { type: Number },
-		page: { type: Number },
-		word: { type: String },
-		wordTranslate: { type: String },
-		transcription: { type: String },
-		image: { type: String },
-		audio: { type: String },
-		audioMeaning: { type: String },
-		audioExample: { type: String },
-		textMeaning: { type: String },
-		textMeaningTranslate: { type: String },
-		textExample: { type: String },
-		textExampleTranslate: { type: String },
-		difficult: { type: Boolean, default: false },
-		deleted: { type: Boolean, default: false },
-		correct: { type: Number, default: 0 },
-		fail: { type: Number, default: 0 }
-		}
-    ```
 </details>
 
 **UpdateUserWords**
@@ -237,6 +217,8 @@ Update word in the database.
 * **URL**
 
     /userWords
+    
+* **NEED TOKEN**
 
 * **Method:**
 
@@ -246,12 +228,12 @@ Update word in the database.
 
   * **Code:** 200 OK <br />
     **Content:** 
-    Ещё не тестил
+    
 </details>
 
 **UserStatistic**
 ----
-Ещё не тестил
+
 
 <details>
 
@@ -280,6 +262,8 @@ Update word in the database.
 
     /name
 
+* **NEED TOKEN**
+
 * **Method:**
 
     `Post`
@@ -293,7 +277,7 @@ Update word in the database.
 
 **UploadNewImage**
 ----
-Ещё не тестил
+* **NEED TOKEN**
 
 <details>
 
