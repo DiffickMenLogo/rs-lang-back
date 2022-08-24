@@ -13,9 +13,7 @@ cloudinary.config({
 router.post('/feedback', async (req, res) => {
 	try {
 		const { mail, message } = req.body;
-		const result = await cloudinary.uploader.upload(req.files.image[0].tempFilePath);
-		console.log(result);
-		mailer(getFeedbackMessage(mail, message, result.url));
+		mailer(getFeedbackMessage(mail, message));
 		res
 			.status(200)
 			.json({ message: `Огромное спасибо за обратную связь. Ответ поступит на указанную вами почту - ${mail}` });
