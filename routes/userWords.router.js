@@ -6,7 +6,7 @@ const { getUserWordsMessage } = require('../utils/getMessage');
 router.get('/userWords', authMiddleware, async (req, res) => {
 	try {
 		const userId = req.user.userId;
-		const user = await User.find({ userId });
+		const user = await User.findById(userId);
 		res.status(200).json({ userWords: user.words, message: 'Ваши слова доставлены' });
 	} catch (e) {
 		console.log('get user words', e);
